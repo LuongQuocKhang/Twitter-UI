@@ -6,7 +6,9 @@ interface ButtonProps {
   onClick: () => void;
   disabled?: boolean;
   outline?: boolean;
-  style?: string
+  color?: string,
+  backgroundColor?: string;
+  width?: number;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -17,7 +19,9 @@ const Button: React.FC<ButtonProps> = ({
   disabled,
   outline,
   onClick,
-  style
+  color,
+  backgroundColor,
+  width
 }) => {
   return (
     <>
@@ -41,7 +45,7 @@ const Button: React.FC<ButtonProps> = ({
           ${outline ? "border-white" : ""}
           ${outline ? "text-white" : ""}
           `}
-          // style={style}
+          style={{backgroundColor: backgroundColor, color: color, width: width, justifyContent: 'center', margin: "0 auto"}}
       >
         {label}
       </button>
@@ -50,6 +54,3 @@ const Button: React.FC<ButtonProps> = ({
 };
 
 export default Button;
-
-// color: white;
-// background-color: rgb(29, 155, 240);

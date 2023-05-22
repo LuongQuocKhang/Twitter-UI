@@ -3,49 +3,49 @@
 import { FiBell, FiUser, FiHash, FiMessageCircle, 
 	FiBookmark, FiList, FiHome, FiMoreHorizontal, FiLogOut } from "react-icons/fi";
 
-import SidebarLogo from "./SidebarLogo";
-import SidebarItem from "./SidebarItem";
-import SidebarTweetButton from "./SidebarTweetButton";
+import SidebarLogo from "../layout/SidebarLogo";
+import SidebarItem from "../layout/SidebarItem";
+import SidebarTweetButton from "../layout/SidebarTweetButton";
 
 const Sidebar = () => {
   const items = [
     {
-      label: "Trang chủ",
+      label: "Home",
       href: "/",
       icon: FiHome,
     },
     {
-      label: "Khám phá",
+      label: "Explore",
       href: "/explore",
       icon: FiHash,
     },
     {
-      label: "Tin nhắn",
+      label: "Messages",
       href: "/messages",
       icon: FiMessageCircle,
     },
     {
-      label: "Danh sách",
+      label: "List",
       href: "/list",
       icon: FiList,
     },
     {
-      label: "Dấu trang",
+      label: "Bookmarks",
       href: "/bookmarks",
       icon: FiBookmark,
     },
     {
-      label: "Thông báo",
+      label: "Notification",
       href: "/notification",
       icon: FiBell,
     },
     {
-      label: "Hồ sơ",
-      href: "/profile/123",
+      label: "Profile",
+      href: "/profile",
       icon: FiUser,
     },
     {
-      label: "Thêm",
+      label: "More",
       href: "/more",
       icon: FiMoreHorizontal,
     },

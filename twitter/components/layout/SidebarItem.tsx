@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-
+import Link from "next/link";
 interface SidebarItemProps {
   label: string;
   href?: string;
@@ -14,7 +14,10 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
   onClick,
 }) => {
   return (
-    <div className="flex flex-row items-center">
+    <Link href={{
+      pathname: href
+    }}>
+      <div className="flex flex-row items-center">
       <div className="relative
             rounded-full
             h-14
@@ -43,9 +46,13 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
             hover:bg-opacity-30
             cursor-pointer">
         <Icon size={24} color="black"></Icon>
-        <p className="hidden lg:block text-xl">{label}</p>
+        <p className="hidden lg:block text-xl">
+          {label}
+        </p>
       </div>
     </div>
+    </Link>
+    
   );
 };
 

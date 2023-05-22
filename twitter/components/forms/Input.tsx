@@ -3,6 +3,7 @@ interface InputProps {
   value?: string;
   type?: string;
   disabled?: boolean;
+  width?: number;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -12,6 +13,7 @@ const Input: React.FC<InputProps> = ({
   type,
   disabled,
   onChange,
+  width
 }) => {
   return (
     <>
@@ -22,10 +24,9 @@ const Input: React.FC<InputProps> = ({
         placeholder={placeholder}
         type={type}
         className="
-        w-full p-4 text-lg bg-white border-2 border-neutral-800 rounded-md
-        outline-none text-black focus:border-sky-500
-        focus:border-2 transition disabled:bg-neutral-900
-        disabled:opacity-70 disabled:cursor-not-allowed"
+          shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline disabled:bg-neutral-900
+          disabled:opacity-70 disabled:cursor-not-allowed"
+        style={{width: width}}
       />
     </>
   );
