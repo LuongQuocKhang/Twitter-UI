@@ -64,15 +64,15 @@ const Modal: React.FC<ModelProps> = ({
           className="h-14 w-14 p-4 items-center justify-center cursor-pointer transition" style={{ margin: "0 auto" }}>
           <BsTwitter size={40} color="rgb(29, 155, 240)" />
         </div>
-        <div className="flex items-center justify-between p-5 rounded-t">
+        <div className="flex items-center justify-between rounded-t">
           <h3 className="text-3xl font-semibold text-black"
             style={{ margin: "0 auto" }}>
             {title}
           </h3>
         </div>
 
-        <div className="relative p-5 flex-auto">{body}</div>
-        <div className="flex flex-col gap-2 p-5">
+        <div className="relative flex-auto">{body}</div>
+        <div className="flex flex-col gap-2">
           <Button
             disabled={disabled}
             label={actionLabel}
